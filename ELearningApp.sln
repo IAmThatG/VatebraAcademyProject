@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELearningApi", "ELearningApi\ELearningApi.csproj", "{2DE21195-02F3-40A3-8230-4CBFAB4A3D3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELearnngApp.Domain", "ELearnngApp.Domain\ELearnngApp.Domain.csproj", "{A27666A2-8D35-4F7A-9FFC-9628E8EF454A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElearningApp.Data", "ElearningApp.Data\ElearningApp.Data.csproj", "{539F7C76-1927-48DF-811B-36CD0C6D6853}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DE21195-02F3-40A3-8230-4CBFAB4A3D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE21195-02F3-40A3-8230-4CBFAB4A3D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE21195-02F3-40A3-8230-4CBFAB4A3D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE21195-02F3-40A3-8230-4CBFAB4A3D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27666A2-8D35-4F7A-9FFC-9628E8EF454A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27666A2-8D35-4F7A-9FFC-9628E8EF454A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27666A2-8D35-4F7A-9FFC-9628E8EF454A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27666A2-8D35-4F7A-9FFC-9628E8EF454A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{539F7C76-1927-48DF-811B-36CD0C6D6853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539F7C76-1927-48DF-811B-36CD0C6D6853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539F7C76-1927-48DF-811B-36CD0C6D6853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539F7C76-1927-48DF-811B-36CD0C6D6853}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

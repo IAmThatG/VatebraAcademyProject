@@ -1,0 +1,14 @@
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/bin/Debug/netcoreapp2.1/ELearningApi.deps.json
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/bin/Debug/netcoreapp2.1/ELearningApi.runtimeconfig.json
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/bin/Debug/netcoreapp2.1/ELearningApi.runtimeconfig.dev.json
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/bin/Debug/netcoreapp2.1/ELearningApi.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/bin/Debug/netcoreapp2.1/ELearningApi.pdb
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.csprojAssemblyReference.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.csproj.CoreCompileInputs.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.RazorAssemblyInfo.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.RazorAssemblyInfo.cs
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.AssemblyInfoInputs.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.AssemblyInfo.cs
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.RazorTargetAssemblyInfo.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.pdb
