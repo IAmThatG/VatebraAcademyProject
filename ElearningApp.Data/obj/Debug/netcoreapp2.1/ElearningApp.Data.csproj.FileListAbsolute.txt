@@ -1,0 +1,11 @@
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.csproj.CoreCompileInputs.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.AssemblyInfoInputs.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.AssemblyInfo.cs
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/bin/Debug/netcoreapp2.1/ElearningApp.Data.deps.json
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/bin/Debug/netcoreapp2.1/ElearningApp.Data.runtimeconfig.json
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/bin/Debug/netcoreapp2.1/ElearningApp.Data.runtimeconfig.dev.json
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/bin/Debug/netcoreapp2.1/ElearningApp.Data.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/bin/Debug/netcoreapp2.1/ElearningApp.Data.pdb
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.pdb
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.csprojAssemblyReference.cache

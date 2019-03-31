@@ -12,3 +12,8 @@
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.RazorTargetAssemblyInfo.cache
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.dll
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.pdb
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/bin/Debug/netcoreapp2.1/ElearningApp.Data.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/bin/Debug/netcoreapp2.1/ELearnngApp.Domain.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/bin/Debug/netcoreapp2.1/ELearnngApp.Domain.pdb
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/bin/Debug/netcoreapp2.1/ElearningApp.Data.pdb
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/obj/Debug/netcoreapp2.1/ELearningApi.csproj.CopyComplete

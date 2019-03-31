@@ -1,0 +1,12 @@
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/bin/Debug/netcoreapp2.1/ELearnngApp.Domain.deps.json
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/bin/Debug/netcoreapp2.1/ELearnngApp.Domain.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/bin/Debug/netcoreapp2.1/ELearnngApp.Domain.pdb
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/bin/Debug/netcoreapp2.1/ElearningApp.Data.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/bin/Debug/netcoreapp2.1/ElearningApp.Data.pdb
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/obj/Debug/netcoreapp2.1/ELearnngApp.Domain.csprojAssemblyReference.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/obj/Debug/netcoreapp2.1/ELearnngApp.Domain.csproj.CoreCompileInputs.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/obj/Debug/netcoreapp2.1/ELearnngApp.Domain.AssemblyInfoInputs.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/obj/Debug/netcoreapp2.1/ELearnngApp.Domain.AssemblyInfo.cs
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/obj/Debug/netcoreapp2.1/ELearnngApp.Domain.csproj.CopyComplete
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/obj/Debug/netcoreapp2.1/ELearnngApp.Domain.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/obj/Debug/netcoreapp2.1/ELearnngApp.Domain.pdb
