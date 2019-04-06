@@ -1,32 +1,24 @@
 ﻿<Properties StartupConfiguration="{2DE21195-02F3-40A3-8230-4CBFAB4A3D3C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ELearningApi/appsettings.Development.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ElearningApp.Data/ELearningDataContextSeeder.cs">
     <Files>
-      <File FileName="ELearningApi/Controllers/ValuesController.cs" Line="1" Column="1" />
-      <File FileName="ELearningApi/Program.cs" Line="13" Column="25" />
-      <File FileName="ELearningApi/Startup.cs" Line="35" Column="107" />
-      <File FileName="ELearningApi/appsettings.Development.json" Line="11" Column="4" />
-      <File FileName="ElearningApp.Data/Entities/Student.cs" Line="4" Column="38" />
-      <File FileName="ElearningApp.Data/Entities/Course.cs" Line="4" Column="34" />
-      <File FileName="ElearningApp.Data/Entities/BaseEntity.cs" Line="6" Column="20" />
-      <File FileName="ElearningApp.Data/ELearningDataContext.cs" Line="1" Column="1" />
-      <File FileName="ELearningApi/appsettings.json" Line="7" Column="22" />
-      <File FileName="ELearningApi/Properties/launchSettings.json" Line="26" Column="47" />
-      <File FileName="ElearningApp.Data/ELearningDataContextFactory.cs" Line="15" Column="47" />
-      <File FileName="ElearningApp.Data/appsettings.json" Line="1" Column="1" />
+      <File FileName="ElearningApp.Data/Entities/Course.cs" Line="24" Column="24" />
+      <File FileName="ElearningApp.Data/Entities/Enrolment.cs" Line="10" Column="45" />
+      <File FileName="ElearningApp.Data/ELearningDataContext.cs" Line="22" Column="16" />
+      <File FileName="ElearningApp.Data/Entities/Student.cs" Line="14" Column="19" />
+      <File FileName="ElearningApp.Data/appsettings.json" Line="9" Column="23" />
+      <File FileName="ElearningApp.Data/ELearningDataContextSeeder.cs" Line="6" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ELearningApp" expanded="True">
             <Node name="ELearningApi" expanded="True">
-              <Node name="Properties" expanded="True" />
-              <Node name="appsettings.Development.json" selected="True" />
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
             </Node>
             <Node name="ElearningApp.Data" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-            </Node>
-            <Node name="ELearnngApp.Domain" expanded="True">
-              <Node name="Dependencies" expanded="True" />
+              <Node name="Entities" expanded="True" />
+              <Node name="ELearningDataContextSeeder.cs" selected="True" />
             </Node>
           </Node>
         </State>

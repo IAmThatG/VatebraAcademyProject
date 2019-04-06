@@ -25,11 +25,15 @@ namespace ElearningApp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CourseCode");
+                    b.Property<string>("CourseCode")
+                        .IsRequired()
+                        .HasMaxLength(10);
 
                     b.Property<string>("CourseDescription");
 
-                    b.Property<string>("CourseTitle");
+                    b.Property<string>("CourseTitle")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.Property<DateTime>("DateCreated");
 
@@ -38,6 +42,29 @@ namespace ElearningApp.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Courses");
+                });
+
+            modelBuilder.Entity("ElearningApp.Data.Entities.Enrolment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("CourseId");
+
+                    b.Property<DateTime>("DateCreated");
+
+                    b.Property<DateTime>("DateUpdated");
+
+                    b.Property<long>("StudentId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("Enrolments");
                 });
 
             modelBuilder.Entity("ElearningApp.Data.Entities.Student", b =>
@@ -50,13 +77,34 @@ namespace ElearningApp.Data.Migrations
 
                     b.Property<DateTime>("DateUpdated");
 
-                    b.Property<string>("Firstname");
+                    b.Property<string>("Firstname")
+                        .IsRequired()
+                        .HasMaxLength(20);
 
-                    b.Property<string>("Lastname");
+                    b.Property<string>("Lastname")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<string>("MaticNumber")
+                        .IsRequired()
+                        .HasMaxLength(11);
 
                     b.HasKey("Id");
 
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("ElearningApp.Data.Entities.Enrolment", b =>
+                {
+                    b.HasOne("ElearningApp.Data.Entities.Course", "Course")
+                        .WithMany("Enrolments")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ElearningApp.Data.Entities.Student", "Student")
+                        .WithMany("Enrolments")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
