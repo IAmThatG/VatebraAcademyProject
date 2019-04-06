@@ -42,6 +42,11 @@ namespace ElearningApp.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Courses");
+
+                    b.HasData(
+                        new { Id = 1L, CourseCode = "CSC 001", CourseDescription = "This Course teaches Html", CourseTitle = "Learning Html", DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local) },
+                        new { Id = 2L, CourseCode = "CSC 002", CourseDescription = "", CourseTitle = "Learning Ef", DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local) }
+                    );
                 });
 
             modelBuilder.Entity("ElearningApp.Data.Entities.Enrolment", b =>
@@ -65,6 +70,11 @@ namespace ElearningApp.Data.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("Enrolments");
+
+                    b.HasData(
+                        new { Id = 1L, CourseId = 1L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), StudentId = 1L },
+                        new { Id = 2L, CourseId = 1L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), StudentId = 2L }
+                    );
                 });
 
             modelBuilder.Entity("ElearningApp.Data.Entities.Student", b =>
@@ -92,6 +102,11 @@ namespace ElearningApp.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Students");
+
+                    b.HasData(
+                        new { Id = 1L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 241, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 244, DateTimeKind.Local), Firstname = "Anthonia", Lastname = "Ebhoaye", MaticNumber = "12345678910" },
+                        new { Id = 2L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 244, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 244, DateTimeKind.Local), Firstname = "Lucky", Lastname = "Moye", MaticNumber = "12345678911" }
+                    );
                 });
 
             modelBuilder.Entity("ElearningApp.Data.Entities.Enrolment", b =>

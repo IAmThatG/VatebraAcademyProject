@@ -19,8 +19,9 @@ namespace ElearningApp.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //create composite key for joining table
-            //modelBuilder.Entity<Enrolment>().HasKey();
+            modelBuilder.SeedStudentData();
+            modelBuilder.SeedCourseData();
+            modelBuilder.SeedEnrolmentData();
         }
     }
 }
