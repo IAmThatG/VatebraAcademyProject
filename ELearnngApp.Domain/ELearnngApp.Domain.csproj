@@ -6,8 +6,14 @@
 
   <ItemGroup>
     <Compile Remove="Class1.cs" />
+    <Compile Remove="ApiResponseModels\GetStudentResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ElearningApp.Data\ElearningApp.Data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="ApiResponseModels\" />
   </ItemGroup>
 </Project>

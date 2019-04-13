@@ -8,4 +8,3 @@
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.AssemblyInfo.cs
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.dll
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.pdb
-/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.csprojAssemblyReference.cache
