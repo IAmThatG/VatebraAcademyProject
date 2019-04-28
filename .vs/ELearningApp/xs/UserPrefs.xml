@@ -1,43 +1,49 @@
 ﻿<Properties StartupConfiguration="{2DE21195-02F3-40A3-8230-4CBFAB4A3D3C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ELearningApi/appsettings.Development.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ElearningApp.Data/Entities/Student.cs">
     <Files>
-      <File FileName="ELearningApi/Controllers/ValuesController.cs" Line="1" Column="1" />
-      <File FileName="ELearningApi/Program.cs" Line="13" Column="25" />
-      <File FileName="ELearningApi/Startup.cs" Line="35" Column="107" />
-      <File FileName="ELearningApi/appsettings.Development.json" Line="11" Column="4" />
-      <File FileName="ElearningApp.Data/Entities/Student.cs" Line="4" Column="38" />
-      <File FileName="ElearningApp.Data/Entities/Course.cs" Line="4" Column="34" />
-      <File FileName="ElearningApp.Data/Entities/BaseEntity.cs" Line="6" Column="20" />
-      <File FileName="ElearningApp.Data/ELearningDataContext.cs" Line="1" Column="1" />
-      <File FileName="ELearningApi/appsettings.json" Line="7" Column="22" />
-      <File FileName="ELearningApi/Properties/launchSettings.json" Line="26" Column="47" />
-      <File FileName="ElearningApp.Data/ELearningDataContextFactory.cs" Line="15" Column="47" />
-      <File FileName="ElearningApp.Data/appsettings.json" Line="1" Column="1" />
+      <File FileName="ELearningApi/Controllers/StudentController.cs" Line="45" Column="1" />
+      <File FileName="ELearnngApp.Domain/Services/Interfaces/IService.cs" Line="8" Column="35" />
+      <File FileName="ELearnngApp.Domain/Services/StudentService.cs" Line="24" Column="56" />
+      <File FileName="ElearningApp.Data/Repository/Interfaces/IRepository.cs" Line="11" Column="16" />
+      <File FileName="ELearningApi/Startup.cs" Line="1" Column="1" />
+      <File FileName="ELearnngApp.Domain/ApiResponseModels/StudentResponse.cs" Line="18" Column="32" />
+      <File FileName="ElearningApp.Data/Entities/Student.cs" Line="11" Column="19" />
+      <File FileName="ELearningApi/Program.cs" Line="1" Column="1" />
+      <File FileName="ELearnngApp.Domain/ApiResponseModels/Response.cs" Line="5" Column="6" />
+      <File FileName="ELearnngApp.Domain/ApiRequestModels/StudentRequest.cs" Line="4" Column="18" />
+      <File FileName="ELearnngApp.Domain/AutomapperProfiles/MappingProfile.cs" Line="12" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ELearningApp" expanded="True">
             <Node name="ELearningApi" expanded="True">
-              <Node name="Properties" expanded="True" />
-              <Node name="appsettings.Development.json" selected="True" />
+              <Node name="Controllers" expanded="True" />
             </Node>
             <Node name="ElearningApp.Data" expanded="True">
-              <Node name="Dependencies" expanded="True" />
+              <Node name="Entities" expanded="True">
+                <Node name="Student.cs" selected="True" />
+              </Node>
             </Node>
-            <Node name="ELearnngApp.Domain" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-            </Node>
+            <Node name="ELearnngApp.Domain" expanded="True" />
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.ELearningApi PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/Controllers/StudentController.cs" relfile="ELearningApi/Controllers/StudentController.cs" line="28" column="45" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/Services/StudentService.cs" relfile="ELearnngApp.Domain/Services/StudentService.cs" line="35" column="1" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/Repository/StudentRepo.cs" relfile="ElearningApp.Data/Repository/StudentRepo.cs" line="28" column="1" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/Controllers/StudentController.cs" relfile="ELearningApi/Controllers/StudentController.cs" line="34" column="1" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/Controllers/StudentController.cs" relfile="ELearningApi/Controllers/StudentController.cs" line="45" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <AuthorInfo Name="gokolie" Email="gabriel_ifeanyi@ymail.com" Copyright="" Company="" Trademark="" />
