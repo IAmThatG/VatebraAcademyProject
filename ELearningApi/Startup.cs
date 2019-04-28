@@ -2,7 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using ElearningApp.Data;
+using ElearningApp.Data.Entities;
+using ElearningApp.Data.Repository;
+using ElearningApp.Data.Repository.Interfaces;
+using ELearnngApp.Domain.ApiRequestModels;
+using ELearnngApp.Domain.ApiResponseModels;
+using ELearnngApp.Domain.Services;
+using ELearnngApp.Domain.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,10 +40,18 @@ namespace ELearningApi
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             var connectionString = _config.GetConnectionString("DefaultConnection"); 
-            services.AddDbContext<ELearningDataContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<ELearningDataContext>(opt => opt.UseSqlServer(connectionString));
 
             var logger = _loggerFactory.CreateLogger<Startup>();
             logger.LogDebug("Starting application");
+
+            logger.LogDebug("Adding Service Dependencies...");
+
+            services.AddScoped<IRepository<Student>, StudentRepo>();
+
+            services.AddScoped<IService<StudentResponse, StudentRequest>, StudentService>();
+
+            services.AddAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -25,11 +25,15 @@ namespace ElearningApp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CourseCode");
+                    b.Property<string>("CourseCode")
+                        .IsRequired()
+                        .HasMaxLength(10);
 
                     b.Property<string>("CourseDescription");
 
-                    b.Property<string>("CourseTitle");
+                    b.Property<string>("CourseTitle")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
                     b.Property<DateTime>("DateCreated");
 
@@ -38,6 +42,39 @@ namespace ElearningApp.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Courses");
+
+                    b.HasData(
+                        new { Id = 1L, CourseCode = "CSC 001", CourseDescription = "This Course teaches Html", CourseTitle = "Learning Html", DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local) },
+                        new { Id = 2L, CourseCode = "CSC 002", CourseDescription = "", CourseTitle = "Learning Ef", DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local) }
+                    );
+                });
+
+            modelBuilder.Entity("ElearningApp.Data.Entities.Enrolment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("CourseId");
+
+                    b.Property<DateTime>("DateCreated");
+
+                    b.Property<DateTime>("DateUpdated");
+
+                    b.Property<long>("StudentId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("Enrolments");
+
+                    b.HasData(
+                        new { Id = 1L, CourseId = 1L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), StudentId = 1L },
+                        new { Id = 2L, CourseId = 1L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), StudentId = 2L }
+                    );
                 });
 
             modelBuilder.Entity("ElearningApp.Data.Entities.Student", b =>
@@ -50,13 +87,39 @@ namespace ElearningApp.Data.Migrations
 
                     b.Property<DateTime>("DateUpdated");
 
-                    b.Property<string>("Firstname");
+                    b.Property<string>("Firstname")
+                        .IsRequired()
+                        .HasMaxLength(20);
 
-                    b.Property<string>("Lastname");
+                    b.Property<string>("Lastname")
+                        .IsRequired()
+                        .HasMaxLength(20);
+
+                    b.Property<string>("MaticNumber")
+                        .IsRequired()
+                        .HasMaxLength(11);
 
                     b.HasKey("Id");
 
                     b.ToTable("Students");
+
+                    b.HasData(
+                        new { Id = 1L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 241, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 244, DateTimeKind.Local), Firstname = "Anthonia", Lastname = "Ebhoaye", MaticNumber = "12345678910" },
+                        new { Id = 2L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 244, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 244, DateTimeKind.Local), Firstname = "Lucky", Lastname = "Moye", MaticNumber = "12345678911" }
+                    );
+                });
+
+            modelBuilder.Entity("ElearningApp.Data.Entities.Enrolment", b =>
+                {
+                    b.HasOne("ElearningApp.Data.Entities.Course", "Course")
+                        .WithMany("Enrolments")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ElearningApp.Data.Entities.Student", "Student")
+                        .WithMany("Enrolments")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
