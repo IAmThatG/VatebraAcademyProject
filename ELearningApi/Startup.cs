@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using ElearningApp.Data;
 using ElearningApp.Data.Entities;
 using ElearningApp.Data.Repository;
 using ElearningApp.Data.Repository.Interfaces;
+using ELearnngApp.Domain.ApiRequestModels;
 using ELearnngApp.Domain.ApiResponseModels;
 using ELearnngApp.Domain.Services;
 using ELearnngApp.Domain.Services.Interfaces;
@@ -47,7 +49,9 @@ namespace ELearningApi
 
             services.AddScoped<IRepository<Student>, StudentRepo>();
 
-            services.AddScoped<IService<StudentResponse>, StudentService>();
+            services.AddScoped<IService<StudentResponse, StudentRequest>, StudentService>();
+
+            services.AddAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

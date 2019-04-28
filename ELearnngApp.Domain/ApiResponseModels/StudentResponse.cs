@@ -8,23 +8,16 @@ namespace ELearnngApp.Domain.ApiResponseModels
 {
     public class StudentResponse
     {
-        [Required]
-        [StringLength(20)]
+        public readonly long Id;
         public string Firstname { get; set; }
-
-        [Required]
-        [StringLength(20)]
         public string Lastname { get; set; }
-
-        [Required]
-        [StringLength(11)]
         public string MaticNumber { get; set; }
 
-        public ICollection<Enrolment> Enrolments { get; set; }
+        public ICollection<EnrolmentResponse> Enrolments { get; set; }
 
         public StudentResponse()
         {
-            Enrolments = new Collection<Enrolment>();
+            Enrolments = new Collection<EnrolmentResponse>();
         }
     }
 }

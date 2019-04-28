@@ -15,5 +15,10 @@
     <Folder Include="Services\" />
     <Folder Include="Services\Interfaces\" />
     <Folder Include="ApiResponseModels\" />
+    <Folder Include="ApiRequestModels\" />
+    <Folder Include="AutomapperProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 </Project>
