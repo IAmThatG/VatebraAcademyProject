@@ -7,22 +7,27 @@ using ElearningApp.Data.Repository.Interfaces;
 using ELearnngApp.Domain.ApiRequestModels;
 using ELearnngApp.Domain.ApiResponseModels;
 using ELearnngApp.Domain.Services.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace ELearnngApp.Domain.Services
 {
-    public class StudentService : IService<StudentResponse, StudentRequest>
+    public class StudentService : IStudentService
     {
-        private readonly IRepository<Student> _studentRepo;
+        private readonly IStudentRepository _studentRepo;
         private readonly IMapper _mapper;
+        private readonly ILogger<StudentService> _logger;
 
-        public StudentService(IRepository<Student> studentRepo, IMapper mapper)
+        public StudentService(IStudentRepository studentRepo, IMapper mapper,
+            ILogger<StudentService> logger)
         {
             _mapper = mapper;
+            _logger = logger;
             _studentRepo = studentRepo;
         }
 
         public async Task<StudentResponse> Create(StudentRequest obj)
         {
+            _logger.LogInformation("Attempting to create student in service");
             var student = _mapper.Map<Student>(obj);
             var createdStudent = await _studentRepo.Insert(student);
             var studentResponse = _mapper.Map<StudentResponse>(createdStudent);
@@ -50,6 +55,13 @@ namespace ELearnngApp.Domain.Services
         public async Task<StudentResponse> GetByIdAsync(long id)
         {
             var student = await _studentRepo.SelectByIdAsync(id);
+            var studentResponse = _mapper.Map<StudentResponse>(student);
+            return studentResponse;
+        }
+
+        public async Task<StudentResponse> GetByMatricNumberAsync(string matricNumber)
+        {
+            var student = await _studentRepo.SelectByMatricNumberAsync(matricNumber);
             var studentResponse = _mapper.Map<StudentResponse>(student);
             return studentResponse;
         }

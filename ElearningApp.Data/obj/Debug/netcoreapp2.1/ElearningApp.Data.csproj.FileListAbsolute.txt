@@ -8,4 +8,9 @@
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.AssemblyInfo.cs
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.dll
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.pdb
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/bin/Debug/netcoreapp2.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/bin/Debug/netcoreapp2.1/Microsoft.Extensions.Identity.Stores.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/bin/Debug/netcoreapp2.1/Microsoft.Extensions.Identity.Stores.xml
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/bin/Debug/netcoreapp2.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.csprojAssemblyReference.cache
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/obj/Debug/netcoreapp2.1/ElearningApp.Data.csproj.CopyComplete

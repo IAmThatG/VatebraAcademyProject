@@ -1,10 +1,11 @@
 ﻿using System;
 using ElearningApp.Data.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ElearningApp.Data
 {
-    public class ELearningDataContext : DbContext
+    public class ELearningDataContext : IdentityDbContext<BaseUser, BaseRole, long>
     {
         public DbSet<Student> Students { get; set; }
 
@@ -17,11 +18,12 @@ namespace ElearningApp.Data
 
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            modelBuilder.SeedStudentData();
-            modelBuilder.SeedCourseData();
-            modelBuilder.SeedEnrolmentData();
+            base.OnModelCreating(builder);
+            builder.SeedStudentData();
+            builder.SeedCourseData();
+            builder.SeedEnrolmentData();
         }
     }
 }

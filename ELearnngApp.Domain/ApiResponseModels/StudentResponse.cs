@@ -8,7 +8,7 @@ namespace ELearnngApp.Domain.ApiResponseModels
 {
     public class StudentResponse
     {
-        public readonly long Id;
+        public long Id;
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string MaticNumber { get; set; }

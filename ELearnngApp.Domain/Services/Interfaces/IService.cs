@@ -5,7 +5,9 @@ using ElearningApp.Data.Entities;
 
 namespace ELearnngApp.Domain.Services.Interfaces
 {
-    public interface IService<T, G>
+    // T is the return type of the method
+    // G is the parameter type of the method
+    public interface IService<T, G> 
     {
         IList<T> GetAll();
         Task<T> GetByIdAsync(long id);

@@ -16,9 +16,14 @@
     <Folder Include="Services\Interfaces\" />
     <Folder Include="ApiResponseModels\" />
     <Folder Include="ApiRequestModels\" />
-    <Folder Include="AutomapperProfiles\" />
+    <Folder Include="AutoMapperProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Identity.Stores">
+      <HintPath>..\..\..\..\..\..\..\usr\local\share\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.identity.stores\2.1.1\lib\netstandard2.0\Microsoft.Extensions.Identity.Stores.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
