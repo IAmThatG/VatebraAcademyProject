@@ -19,6 +19,83 @@ namespace ElearningApp.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ElearningApp.Data.Entities.BaseRole", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles");
+                });
+
+            modelBuilder.Entity("ElearningApp.Data.Entities.BaseUser", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AccessFailedCount");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken();
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256);
+
+                    b.Property<bool>("EmailConfirmed");
+
+                    b.Property<bool>("LockoutEnabled");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256);
+
+                    b.Property<string>("PasswordHash");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("SecurityStamp");
+
+                    b.Property<bool>("TwoFactorEnabled");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers");
+                });
+
             modelBuilder.Entity("ElearningApp.Data.Entities.Course", b =>
                 {
                     b.Property<long>("Id")
@@ -44,8 +121,8 @@ namespace ElearningApp.Data.Migrations
                     b.ToTable("Courses");
 
                     b.HasData(
-                        new { Id = 1L, CourseCode = "CSC 001", CourseDescription = "This Course teaches Html", CourseTitle = "Learning Html", DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local) },
-                        new { Id = 2L, CourseCode = "CSC 002", CourseDescription = "", CourseTitle = "Learning Ef", DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 246, DateTimeKind.Local) }
+                        new { Id = 1L, CourseCode = "CSC 001", CourseDescription = "This Course teaches Html", CourseTitle = "Learning Html", DateCreated = new DateTime(2019, 5, 4, 17, 1, 31, 410, DateTimeKind.Local), DateUpdated = new DateTime(2019, 5, 4, 17, 1, 31, 410, DateTimeKind.Local) },
+                        new { Id = 2L, CourseCode = "CSC 002", CourseDescription = "", CourseTitle = "Learning Ef", DateCreated = new DateTime(2019, 5, 4, 17, 1, 31, 410, DateTimeKind.Local), DateUpdated = new DateTime(2019, 5, 4, 17, 1, 31, 410, DateTimeKind.Local) }
                     );
                 });
 
@@ -72,8 +149,8 @@ namespace ElearningApp.Data.Migrations
                     b.ToTable("Enrolments");
 
                     b.HasData(
-                        new { Id = 1L, CourseId = 1L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), StudentId = 1L },
-                        new { Id = 2L, CourseId = 1L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 247, DateTimeKind.Local), StudentId = 2L }
+                        new { Id = 1L, CourseId = 1L, DateCreated = new DateTime(2019, 5, 4, 17, 1, 31, 410, DateTimeKind.Local), DateUpdated = new DateTime(2019, 5, 4, 17, 1, 31, 410, DateTimeKind.Local), StudentId = 1L },
+                        new { Id = 2L, CourseId = 1L, DateCreated = new DateTime(2019, 5, 4, 17, 1, 31, 410, DateTimeKind.Local), DateUpdated = new DateTime(2019, 5, 4, 17, 1, 31, 410, DateTimeKind.Local), StudentId = 2L }
                     );
                 });
 
@@ -104,9 +181,92 @@ namespace ElearningApp.Data.Migrations
                     b.ToTable("Students");
 
                     b.HasData(
-                        new { Id = 1L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 241, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 244, DateTimeKind.Local), Firstname = "Anthonia", Lastname = "Ebhoaye", MaticNumber = "12345678910" },
-                        new { Id = 2L, DateCreated = new DateTime(2019, 4, 6, 16, 45, 58, 244, DateTimeKind.Local), DateUpdated = new DateTime(2019, 4, 6, 16, 45, 58, 244, DateTimeKind.Local), Firstname = "Lucky", Lastname = "Moye", MaticNumber = "12345678911" }
+                        new { Id = 1L, DateCreated = new DateTime(2019, 5, 4, 17, 1, 31, 404, DateTimeKind.Local), DateUpdated = new DateTime(2019, 5, 4, 17, 1, 31, 408, DateTimeKind.Local), Firstname = "Anthonia", Lastname = "Ebhoaye", MaticNumber = "12345678910" },
+                        new { Id = 2L, DateCreated = new DateTime(2019, 5, 4, 17, 1, 31, 408, DateTimeKind.Local), DateUpdated = new DateTime(2019, 5, 4, 17, 1, 31, 408, DateTimeKind.Local), Firstname = "Lucky", Lastname = "Moye", MaticNumber = "12345678911" }
                     );
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<long>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType");
+
+                    b.Property<string>("ClaimValue");
+
+                    b.Property<long>("RoleId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<long>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ClaimType");
+
+                    b.Property<string>("ClaimValue");
+
+                    b.Property<long>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<long>", b =>
+                {
+                    b.Property<string>("LoginProvider");
+
+                    b.Property<string>("ProviderKey");
+
+                    b.Property<string>("ProviderDisplayName");
+
+                    b.Property<long>("UserId");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<long>", b =>
+                {
+                    b.Property<long>("UserId");
+
+                    b.Property<long>("RoleId");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<long>", b =>
+                {
+                    b.Property<long>("UserId");
+
+                    b.Property<string>("LoginProvider");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Value");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens");
                 });
 
             modelBuilder.Entity("ElearningApp.Data.Entities.Enrolment", b =>
@@ -119,6 +279,51 @@ namespace ElearningApp.Data.Migrations
                     b.HasOne("ElearningApp.Data.Entities.Student", "Student")
                         .WithMany("Enrolments")
                         .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<long>", b =>
+                {
+                    b.HasOne("ElearningApp.Data.Entities.BaseRole")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<long>", b =>
+                {
+                    b.HasOne("ElearningApp.Data.Entities.BaseUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<long>", b =>
+                {
+                    b.HasOne("ElearningApp.Data.Entities.BaseUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<long>", b =>
+                {
+                    b.HasOne("ElearningApp.Data.Entities.BaseRole")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ElearningApp.Data.Entities.BaseUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<long>", b =>
+                {
+                    b.HasOne("ElearningApp.Data.Entities.BaseUser")
+                        .WithMany()
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

@@ -11,8 +11,8 @@ namespace ElearningApp.Data
             builder.Entity<Student>().HasData(
                 new Student[]
                 {
-                    new Student{ Id = 1, Firstname = "Anthonia", Lastname = "Ebhoaye", MatricNumber = "12345678910", DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
-                    new Student{ Id = 2, Firstname = "Lucky", Lastname = "Moye", MatricNumber = "12345678911", DateCreated = DateTime.Now, DateUpdated = DateTime.Now }
+                    new Student{ Id = 1, Firstname = "Anthonia", Lastname = "Ebhoaye", MaticNumber = "12345678910", DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
+                    new Student{ Id = 2, Firstname = "Lucky", Lastname = "Moye", MaticNumber = "12345678911", DateCreated = DateTime.Now, DateUpdated = DateTime.Now }
                 }
             );
         }

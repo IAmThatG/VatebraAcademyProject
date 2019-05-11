@@ -10,3 +10,7 @@
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/obj/Debug/netcoreapp2.1/ELearnngApp.Domain.csproj.CopyComplete
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/obj/Debug/netcoreapp2.1/ELearnngApp.Domain.dll
 /Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/obj/Debug/netcoreapp2.1/ELearnngApp.Domain.pdb
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/bin/Debug/netcoreapp2.1/Microsoft.Extensions.Identity.Stores.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/bin/Debug/netcoreapp2.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/bin/Debug/netcoreapp2.1/Microsoft.Extensions.Identity.Stores.xml
+/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/bin/Debug/netcoreapp2.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml

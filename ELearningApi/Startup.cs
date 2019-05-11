@@ -47,9 +47,18 @@ namespace ELearningApi
 
             logger.LogDebug("Adding Service Dependencies...");
 
-            services.AddScoped<IRepository<Student>, StudentRepo>();
+            services.AddIdentity<BaseUser, BaseRole>()
+                .AddEntityFrameworkStores<ELearningDataContext>();
 
-            services.AddScoped<IService<StudentResponse, StudentRequest>, StudentService>();
+            //services.AddScoped<IRepository<Student>, StudentRepo>();
+
+            //services.AddScoped<IService<StudentResponse, StudentRequest>, StudentService>();
+
+            services.AddScoped<IStudentRepository, StudentRepo>();
+
+            services.AddScoped<IStudentService, StudentService>();
+
+            services.AddScoped<IAuthService, AuthService>();
 
             services.AddAutoMapper();
         }
@@ -67,6 +76,7 @@ namespace ELearningApi
             }
 
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

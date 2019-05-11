@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Microsoft.AspNetCore.Cryptography.Internal/2.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.Internal": "2.1.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -239,6 +260,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Identity.Core/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "2.1.1",
+          "Microsoft.Extensions.Logging": "2.1.1",
+          "Microsoft.Extensions.Options": "2.1.1",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/2.1.1": {
@@ -1019,6 +1055,34 @@
     }
   },
   "libraries": {
+    "Microsoft.AspNetCore.Cryptography.Internal/2.1.1": {
+      "sha512": "yJDPaTzME9+buqWFGF9rRBaLUJa9J97HMZUeYv9aZt8PQA25lymPNfsyNlb4Ww3k+d6IqmzBr90P4FmE8pmfKQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.cryptography.internal/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
+        "microsoft.aspnetcore.cryptography.internal.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.internal.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation/2.1.1": {
+      "sha512": "/d2i2TmzLjXwfzKt8oZEUjp2P1iyysKx8UWQP7zH8WvkkgxW2pZSQx5mHb4KuaZ+mC4W4Q6d6CCiFkQJxk4SAQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.cryptography.keyderivation/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/netcoreapp2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
+        "microsoft.aspnetcore.cryptography.keyderivation.2.1.1.nupkg.sha512",
+        "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
+      ]
+    },
     "Microsoft.CSharp/4.5.0": {
       "sha512": "EGoBmf3Na2ppbhPePDE9PlX81r1HuOZH5twBrq7couJZiPTjUnD3648balerQJO6EJ8Sj+43+XuRwQ7r+3tE3w==",
       "type": "package",
@@ -1349,6 +1413,19 @@
         "lib/netstandard2.0/Microsoft.Extensions.FileSystemGlobbing.xml",
         "microsoft.extensions.filesystemglobbing.2.1.1.nupkg.sha512",
         "microsoft.extensions.filesystemglobbing.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Identity.Core/2.1.1": {
+      "sha512": "Ob9ms69b2qhQhi3SMNhE3SPsCIWhyC4e3IZWSRWxWXwfVLcOfrjaC3qJDPiTOE6Gs7QB/A7jM16i86v6TZ2g5A==",
+      "type": "package",
+      "path": "microsoft.extensions.identity.core/2.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.xml",
+        "microsoft.extensions.identity.core.2.1.1.nupkg.sha512",
+        "microsoft.extensions.identity.core.nuspec"
       ]
     },
     "Microsoft.Extensions.Logging/2.1.1": {
@@ -3776,6 +3853,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.1",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.1",
       "Microsoft.Extensions.Configuration.Json >= 2.1.1",
+      "Microsoft.Extensions.Identity.Core >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -3831,6 +3909,10 @@
             "version": "[2.1.1, )"
           },
           "Microsoft.Extensions.Configuration.Json": {
+            "target": "Package",
+            "version": "[2.1.1, )"
+          },
+          "Microsoft.Extensions.Identity.Core": {
             "target": "Package",
             "version": "[2.1.1, )"
           },
