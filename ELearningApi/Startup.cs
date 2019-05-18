@@ -14,6 +14,7 @@ using ELearnngApp.Domain.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -49,6 +50,27 @@ namespace ELearningApi
 
             services.AddIdentity<BaseUser, BaseRole>()
                 .AddEntityFrameworkStores<ELearningDataContext>();
+
+            services.ConfigureApplicationCookie(config =>
+            {
+                config.Events.OnRedirectToLogin = (ctx) =>
+                {
+                    if (ctx.Request.Path.StartsWithSegments("/api")
+                    && ctx.Response.StatusCode == 200)
+                        ctx.Response.StatusCode = 401;
+
+                    return Task.CompletedTask;
+                };
+
+                config.Events.OnRedirectToAccessDenied = (ctx) =>
+                {
+                    if (ctx.Request.Path.StartsWithSegments("/api")
+                    && ctx.Response.StatusCode == 200)
+                        ctx.Response.StatusCode = 403;
+
+                    return Task.CompletedTask;
+                };
+            });
 
             //services.AddScoped<IRepository<Student>, StudentRepo>();
 

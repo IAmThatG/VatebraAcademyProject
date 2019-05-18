@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using ELearningApi.CustomFilters;
 using ELearnngApp.Domain.ApiRequestModels;
 using ELearnngApp.Domain.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -20,27 +21,53 @@ namespace ELearningApi.Controllers
             _authService = authService;
         }
 
-        [HttpPost]
+        [HttpPost("SignUp")]
+        [ModelValidation]
         public async Task<IActionResult> SignUp([FromBody] SignUpRequest signUpRequest)
         {
-            if (ModelState.IsValid)
+            bool isRegistered = false;
+            try
             {
-                bool isRegistered = false;
-                try
+                //check if user exists
+                
+
+                isRegistered = await _authService.SignUp(signUpRequest);
+                if (isRegistered)
                 {
-                    isRegistered = await _authService.SignUp(signUpRequest);
-                    if (isRegistered)
-                    {
-                        return Ok("User created successfully");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError("System error occured", ex);
-                    return StatusCode(500);
+                    return Ok("User created successfully");
                 }
             }
-            return BadRequest("Request is not valid");
+            catch (Exception ex)
+            {
+                _logger.LogError("System error occured", ex);
+                return StatusCode(500);
+            }
+            return StatusCode(422, "Failed to create user");
+        }
+
+        [HttpPost("SignIn")]
+        [ModelValidation]
+        public async Task<IActionResult> SignIn([FromBody] SignInRequest signInRequest)
+        {
+            bool isSignedIn = false;
+            try
+            {
+                isSignedIn = await _authService.SignIn(signInRequest);
+                if (!isSignedIn) return BadRequest("Invalid Credentials");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("System error occured", ex);
+                return StatusCode(500);
+            }
+            return Ok("sign-in successful");
+        }
+
+        [HttpGet("SignOut")]
+        public async Task<IActionResult> SignOut()
+        {
+            await _authService.SignOut();
+            return Ok("Your session has ended");
         }
     }
 }

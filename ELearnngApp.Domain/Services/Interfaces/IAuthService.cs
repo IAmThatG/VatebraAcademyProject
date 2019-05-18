@@ -8,5 +8,7 @@ namespace ELearnngApp.Domain.Services.Interfaces
     public interface IAuthService
     {
         Task<bool> SignUp(SignUpRequest signUpRequest);
+        Task<bool> SignIn(SignInRequest signInRequest);
+        Task SignOut();
     }
 }

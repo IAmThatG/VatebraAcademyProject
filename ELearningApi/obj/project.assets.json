@@ -4382,7 +4382,8 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.0.0",
-          "ElearningApp.Data": "1.0.0"
+          "ElearningApp.Data": "1.0.0",
+          "Microsoft.AspNetCore.Identity": "2.1.1"
         },
         "compile": {
           "bin/placeholder/ELearnngApp.Domain.dll": {}

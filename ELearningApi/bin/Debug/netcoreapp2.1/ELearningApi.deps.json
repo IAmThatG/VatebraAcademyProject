@@ -256,7 +256,8 @@
       "ELearnngApp.Domain/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.0.0",
-          "ElearningApp.Data": "1.0.0"
+          "ElearningApp.Data": "1.0.0",
+          "Microsoft.AspNetCore.Identity": "2.1.1"
         },
         "runtime": {
           "ELearnngApp.Domain.dll": {}

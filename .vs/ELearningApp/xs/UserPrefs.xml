@@ -1,10 +1,16 @@
 ﻿<Properties StartupConfiguration="{2DE21195-02F3-40A3-8230-4CBFAB4A3D3C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ELearningApi/Controllers/StudentController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ELearningApi/Controllers/CourseController.cs">
     <Files>
-      <File FileName="ELearningApi/Startup.cs" Line="1" Column="1" />
-      <File FileName="ElearningApp.Data/ELearningDataContext.cs" Line="1" Column="1" />
-      <File FileName="ELearnngApp.Domain/AutomapperProfiles/MappingProfile.cs" Line="1" Column="1" />
-      <File FileName="ELearningApi/Controllers/StudentController.cs" Line="44" Column="12" />
+      <File FileName="ELearningApi/Controllers/AuthController.cs" Line="67" Column="22" />
+      <File FileName="ELearningApi/Controllers/StudentController.cs" Line="52" Column="1" />
+      <File FileName="ELearningApi/CustomFilters/ModelValidationAttribute.cs" Line="11" Column="1" />
+      <File FileName="ELearnngApp.Domain/ApiRequestModels/SignUpRequest.cs" Line="6" Column="18" />
+      <File FileName="ELearnngApp.Domain/Services/AuthService.cs" Line="68" Column="1" />
+      <File FileName="ELearnngApp.Domain/Services/Interfaces/IAuthService.cs" Line="12" Column="24" />
+      <File FileName="ELearnngApp.Domain/AutomapperProfiles/MappingProfile.cs" Line="18" Column="86" />
+      <File FileName="ELearnngApp.Domain/Services/StudentService.cs" Line="41" Column="80" />
+      <File FileName="ELearningApi/Startup.cs" Line="60" Column="54" />
+      <File FileName="ELearningApi/Controllers/CourseController.cs" Line="13" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +18,7 @@
           <Node name="ELearningApp" expanded="True">
             <Node name="ELearningApi" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="StudentController.cs" selected="True" />
+                <Node name="CourseController.cs" selected="True" />
               </Node>
             </Node>
             <Node name="ElearningApp.Data" expanded="True">
@@ -23,6 +29,7 @@
             </Node>
             <Node name="ELearnngApp.Domain" expanded="True">
               <Node name="ApiRequestModels" expanded="True" />
+              <Node name="AutomapperProfiles" expanded="True" />
               <Node name="Services" expanded="True">
                 <Node name="Interfaces" expanded="True" />
               </Node>
@@ -40,7 +47,13 @@
       <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/Services/StudentService.cs" relfile="ELearnngApp.Domain/Services/StudentService.cs" line="40" column="1" />
       <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/Repository/StudentRepo.cs" relfile="ElearningApp.Data/Repository/StudentRepo.cs" line="37" column="1" />
       <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ElearningApp.Data/Repository/StudentRepo.cs" relfile="ElearningApp.Data/Repository/StudentRepo.cs" line="26" column="1" />
-      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/Controllers/AuthController.cs" relfile="ELearningApi/Controllers/AuthController.cs" line="26" column="1" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/Controllers/AuthController.cs" relfile="ELearningApi/Controllers/AuthController.cs" line="28" column="1" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/Services/AuthService.cs" relfile="ELearnngApp.Domain/Services/AuthService.cs" line="52" column="1" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/Controllers/AuthController.cs" relfile="ELearningApi/Controllers/AuthController.cs" line="52" column="1" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/Services/AuthService.cs" relfile="ELearnngApp.Domain/Services/AuthService.cs" line="33" column="1" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/Controllers/StudentController.cs" relfile="ELearningApi/Controllers/StudentController.cs" line="51" column="1" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearnngApp.Domain/Services/AuthService.cs" relfile="ELearnngApp.Domain/Services/AuthService.cs" line="67" column="39" />
+      <Breakpoint file="/Users/gokolie/Documents/Projects/Personal/ELearningApp/ELearningApi/Controllers/AuthController.cs" relfile="ELearningApi/Controllers/AuthController.cs" line="69" column="40" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

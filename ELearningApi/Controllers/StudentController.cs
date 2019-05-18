@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ELearningApi.CustomFilters;
 using ElearningApp.Data;
 using ElearningApp.Data.Entities;
 using ElearningApp.Data.Repository.Interfaces;
 using ELearnngApp.Domain.ApiRequestModels;
 using ELearnngApp.Domain.ApiResponseModels;
 using ELearnngApp.Domain.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -44,8 +46,11 @@ namespace ELearningApi.Controllers
         //}
 
         [HttpGet("{matricNumber}", Name = "GetStudentByMatricNumber")]
+        [ModelValidation]
+        [Authorize]
         public async Task<IActionResult> GetStudentByMatricNumber(string matricNumber)
         {
+            var claims = this.User.Claims;
             StudentResponse student = null;
             try
             {
@@ -64,6 +69,7 @@ namespace ELearningApi.Controllers
         }
 
         [HttpPost]
+        [ModelValidation]
         public async Task<IActionResult> PostStudent([FromBody] StudentRequest studentRequest)
         {
             string uri = null;

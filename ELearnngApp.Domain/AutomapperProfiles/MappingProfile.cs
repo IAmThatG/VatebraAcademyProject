@@ -14,6 +14,8 @@ namespace ELearnngApp.Domain.AutoMapperProfiles
                 .ForMember(des => des.MaticNumber, opt => opt.MapFrom(src => src.MatricNumber));
             CreateMap<SignUpRequest, BaseUser>()
                 .ForMember(d => d.UserName, opt => opt.MapFrom(src => src.Username));
+            CreateMap<SignInRequest, BaseUser>()
+                .ForMember(d => d.UserName, opt => opt.MapFrom(src => src.Username));
         }
     }
 }
