@@ -9,5 +9,7 @@ namespace ElearningApp.Data.Repository.Interfaces
         IList<T> SelectAll();
         Task<T> SelectByIdAsync(long id);
         Task<T> Insert(T obj);
+        Task<T> Update(T obj);
+        Task<int> Delete(T obj);
     }
 }

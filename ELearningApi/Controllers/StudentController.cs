@@ -90,5 +90,52 @@ namespace ELearningApi.Controllers
             }
             return Created(uri, studentResponse);
         }
+
+        [HttpPut("{matricNo}")]
+        [ModelValidation]
+        public async Task<IActionResult> EditStudent([FromBody] StudentRequest studentRequest, string matricNo)
+        {
+            StudentResponse studentResponse;
+            try
+            {
+                //check if student exist
+                var studentToUpdate = await _studentService.GetByMatricNumberAsync(matricNo);
+                if (studentToUpdate == null)
+                {
+                    return NotFound("Sorry, student doesn't exist");
+                }
+
+                studentResponse = await _studentService.Update(studentRequest, matricNo);
+                if (studentResponse == null)
+                {
+                    return BadRequest("Failed to update student");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("An error occured while serving this request", ex);
+                return StatusCode(500, "A system error occured");
+            }
+            return Ok(studentResponse);
+        }
+
+        [HttpDelete("{matricNumber}")]
+        public async Task<IActionResult> DeleteStudent(string matricNumber)
+        {
+            try
+            {
+                bool isDeleted = await _studentService.Delete(matricNumber);
+                if (!isDeleted)
+                {
+                    return BadRequest("Failed to delete student");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("Internal server error occured while deleting student", ex);
+                return StatusCode(500, "internal server error");
+            }
+            return Ok("Student Deletes Successfully");
+        }
     }
 }

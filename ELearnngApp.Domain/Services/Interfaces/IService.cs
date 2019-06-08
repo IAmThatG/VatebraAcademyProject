@@ -12,5 +12,7 @@ namespace ELearnngApp.Domain.Services.Interfaces
         IList<T> GetAll();
         Task<T> GetByIdAsync(long id);
         Task<T> Create(G obj);
+        Task<T> Update(G obj, string uniqueIdentifier);
+        Task<bool> Delete(string uniqueIdentifier);
     }
 }

@@ -20,6 +20,13 @@ namespace ElearningApp.Data.Repository
             _logger = logger;
         }
 
+        public async Task<int> Delete(Student obj)
+        {
+            _dataContext.Remove(obj);
+            var rowsAffected = await _dataContext.SaveChangesAsync();
+            return rowsAffected;
+        }
+
         public async Task<Student> Insert(Student obj)
         {
             var createdStudent = await _dataContext.Students.AddAsync(obj);
@@ -51,6 +58,14 @@ namespace ElearningApp.Data.Repository
             var student = await _dataContext.Students.Include(s => s.Enrolments)
                 .SingleOrDefaultAsync(s => s.MaticNumber.Equals(matricNumber));
             return student;
+        }
+
+        public async Task<Student> Update(Student obj)
+        {
+            _dataContext.Update(obj);
+            await _dataContext.SaveChangesAsync();
+            var updatedStudent = await SelectByMatricNumberAsync(obj.MaticNumber);
+            return updatedStudent;
         }
     }
 }

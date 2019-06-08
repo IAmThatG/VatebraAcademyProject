@@ -34,6 +34,15 @@ namespace ELearnngApp.Domain.Services
             return studentResponse;
         }
 
+        public async Task<bool> Delete(string matricNumber)
+        {
+            //retrieve student by matric
+            var studentToDelete = await _studentRepo.SelectByMatricNumberAsync(matricNumber);
+            //tell repo to delete student
+            int affectedRows = await _studentRepo.Delete(studentToDelete);
+            return affectedRows > 0 ? true : false;
+        }
+
         public IList<StudentResponse> GetAll()
         {
             //IList<StudentResponse> studentsResult = new List<StudentResponse>();
@@ -63,6 +72,16 @@ namespace ELearnngApp.Domain.Services
         {
             var student = await _studentRepo.SelectByMatricNumberAsync(matricNumber);
             var studentResponse = _mapper.Map<StudentResponse>(student);
+            return studentResponse;
+        }
+
+        public async Task<StudentResponse> Update(StudentRequest obj, string matricNumber)
+        {
+            var student = await _studentRepo.SelectByMatricNumberAsync(matricNumber);
+            var studentUpdate = _mapper.Map(obj, student);
+            studentUpdate.DateUpdated = DateTime.Now;
+            var updatedStudent = await _studentRepo.Update(studentUpdate);
+            var studentResponse = _mapper.Map<StudentResponse>(updatedStudent);
             return studentResponse;
         }
     }
